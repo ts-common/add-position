@@ -1,6 +1,6 @@
 {
   "name": "@ts-common/add-position",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Add position to every character in a stream",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,8 @@
     "tsc": "tsc",
     "tslint": "tslint -p tsconfig.json",
     "jest": "jest",
-    "test": "tsc && tslint -p tsconfig.json && jest"
+    "test": "tsc && tslint -p tsconfig.json && jest",
+    "prepack": "npm install && tsc"
   },
   "jest": {
     "testEnvironment": "node",
