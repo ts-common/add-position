@@ -26,7 +26,7 @@ export const addPosition = (i: iterator.Iterable<string>): iterator.IterableEx<C
     iterator.flatScan(
         i,
         (position, c) => [
-            c === "\n" ? { line: position.line + 1, column: 1 } : { line: position.line, column: position.line + 1 },
+            c === "\n" ? { line: position.line + 1, column: 1 } : { line: position.line, column: position.column + 1 },
             [{ c, position }],
         ],
         { line: 1, column: 1}

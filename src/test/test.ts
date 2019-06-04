@@ -19,4 +19,26 @@ describe("addPosition", () => {
                 { c: "w", position: { line: 2, column: 1 }},
             ])
     })
+    it("json", () => {
+        const result = addPosition("  { \"x\": 2\n }  ")
+            .toArray()
+        expect(result)
+            .toEqual([
+                { c: " ", position: { line: 1, column: 1 }},
+                { c: " ", position: { line: 1, column: 2 }},
+                { c: "{", position: { line: 1, column: 3 }},
+                { c: " ", position: { line: 1, column: 4 }},
+                { c: "\"", position: { line: 1, column: 5 }},
+                { c: "x", position: { line: 1, column: 6 }},
+                { c: "\"", position: { line: 1, column: 7 }},
+                { c: ":", position: { line: 1, column: 8 }},
+                { c: " ", position: { line: 1, column: 9 }},
+                { c: "2", position: { line: 1, column: 10 }},
+                { c: "\n", position: { line: 1, column: 11 }},
+                { c: " ", position: { line: 2, column: 1 }},
+                { c: "}", position: { line: 2, column: 2 }},
+                { c: " ", position: { line: 2, column: 3 }},
+                { c: " ", position: { line: 2, column: 4 }}
+            ])
+    })
 })
