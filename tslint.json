@@ -16,7 +16,8 @@
         "newline-before-return": false,
         "prefer-method-signature": false,
         "arrow-parens": [true, "ban-single-arg-parens"],
-        "object-literal-sort-keys": false
+        "object-literal-sort-keys": false,
+        "no-null-keyword": false
     },
     "rulesDirectory": []
 }

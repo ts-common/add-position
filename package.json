@@ -1,6 +1,6 @@
 {
   "name": "@ts-common/add-position",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Add position to every character in a stream",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -64,7 +64,7 @@
     "jest": "^24.8.0",
     "jest-junit": "^6.4.0",
     "tslint": "^5.17.0",
-    "tslint-immutable": "^5.5.2",
+    "tslint-immutable": "^6.0.0",
     "typescript": "^3.5.1"
   },
   "dependencies": {
