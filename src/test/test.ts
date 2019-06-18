@@ -7,7 +7,7 @@ describe("addPosition", () => {
         const result = addPosition("h")
             .toArray()
         expect(result)
-            .toEqual([{ c: "h", position: { line: 1, column: 1 }}, { c: null, position: { line: 1, column: 2 }}])
+            .toEqual([{ c: "h", position: { line: 1, column: 1 }}, { c: "", position: { line: 1, column: 2 }}])
     })
     it("'h\\nw'", () => {
         const result = addPosition("h\nw")
@@ -17,7 +17,7 @@ describe("addPosition", () => {
                 { c: "h", position: { line: 1, column: 1 }},
                 { c: "\n", position: { line: 1, column: 2 }},
                 { c: "w", position: { line: 2, column: 1 }},
-                { c: null, position: { line: 2, column: 2 }},
+                { c: "", position: { line: 2, column: 2 }},
             ])
     })
     it("json", () => {
@@ -40,7 +40,11 @@ describe("addPosition", () => {
                 { c: "}", position: { line: 2, column: 2 }},
                 { c: " ", position: { line: 2, column: 3 }},
                 { c: " ", position: { line: 2, column: 4 }},
-                { c: null, position: { line: 2, column: 5 }}
+                { c: "", position: { line: 2, column: 5 }}
             ])
+    })
+    it("eof", () => {
+        expect("" < "\u0000")
+            .toBe(true)
     })
 })
