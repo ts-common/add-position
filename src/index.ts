@@ -15,16 +15,18 @@ export type CharAndPosition = {
     /**
      * Character.
      */
-    readonly c: string | null
+    readonly c: string
     /**
      * Position.
      */
     readonly position: Position
 }
 
+export const terminal = ""
+
 export const addPosition = (i: iterator.Iterable<string>): iterator.IterableEx<CharAndPosition> =>
     iterator
-        .concat(i, [null])
+        .concat(i, [terminal])
         .flatScan(
             (position, c) => [
                 c === "\n"
