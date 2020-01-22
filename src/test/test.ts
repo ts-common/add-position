@@ -44,6 +44,7 @@ describe("addPosition", () => {
             ])
     })
     it("eof", () => {
+        // tslint:disable-next-line: strict-comparisons
         expect("" < "\u0000")
             .toBe(true)
     })

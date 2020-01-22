@@ -24,7 +24,7 @@ export type CharAndPosition = {
 
 export const terminal = ""
 
-export const addPosition = (i: iterator.Iterable<string>): iterator.IterableEx<CharAndPosition> =>
+export const addPosition = (i: Iterable<string>): iterator.IterableEx<CharAndPosition> =>
     iterator
         .concat(i, [terminal])
         .flatScan(
